@@ -13,7 +13,7 @@ I make no attempt to style anything, though I do use react-ratchet (a la [monu](
 
 ```sh
 npm i
-./node_modules/.bin/electron .
+npm start
 ```
 
 The app should show up in your menubar as a little kitty! Once you pick a directory and start an instance, it'll open your web browser and file browser to the relevant places.
