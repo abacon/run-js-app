@@ -12,7 +12,7 @@ let rjsInstances = {}
 
 mb.on('ready', function ready () {
   mb.on('after-create-window', function show () {
-    mb.window.webContents.openDevTools()
+    // mb.window.webContents.openDevTools()
   })
 
   ipcMain.on('start-run-js', startRunJS)
