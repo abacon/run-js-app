@@ -1,3 +1,5 @@
+'use strict'
+
 let log = function log (app) {
   app.on('request', (req, res, start) => {
     if (req.url.indexOf('__bundle/') > -1) return // don't log __bundle requests
