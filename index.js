@@ -1,5 +1,6 @@
 'use strict'
 const menubar = require('menubar')
+const opn = require('opn')
 const ipcMain = require('electron').ipcMain
 const dialog = require('electron').dialog
 const RunJS = require('run-js/lib/index.js')
@@ -59,6 +60,8 @@ let startRunJS = function (event, dir) {
 
   rjs.start(function () {
     rjsInstances[dir].status = 'started'
+    opn('http://localhost:60274/')
+    opn('file://' + dir)
   })
 
   event.sender.send('run-js', 'started', dir)
