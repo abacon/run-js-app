@@ -14,7 +14,7 @@
     "page": "^1.6.4",
     "react": "^0.14.5",
     "react-dom": "^0.14.5",
-    "react-ratchet": "^0.4.1",
+    "react-ratchet": "^0.5.0",
     "run-js": "^1.1.2"
   },
   "devDependencies": {},
