@@ -54,7 +54,6 @@ let startRunJS = function (event, dir) {
       transforms: defaultTransforms
     })
     log(rjs)
-    require('../run-js/bin/setup-logger.js')(rjs)
     rjsInstances[dir] = {instance: rjs, status: 'pending', dir: dir}
   }
 
