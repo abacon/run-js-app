@@ -3,6 +3,8 @@ const menubar = require('menubar')
 const ipcMain = require('electron').ipcMain
 const dialog = require('electron').dialog
 const RunJS = require('run-js/lib/index.js')
+const defaultHandlers = require('run-js/lib/default-handlers')
+const defaultTransforms = require('run-js/lib/default-transforms')
 
 const log = require('./log.js')
 
@@ -45,7 +47,11 @@ let startRunJS = function (event, dir) {
   if (rjsInstances[dir]) {
     rjs = rjsInstances[dir].instance
   } else {
-    rjs = new RunJS({dir: dir})
+    rjs = new RunJS({
+      dir: dir,
+      handlers: defaultHandlers,
+      transforms: defaultTransforms
+    })
     log(rjs)
     require('../run-js/bin/setup-logger.js')(rjs)
     rjsInstances[dir] = {instance: rjs, status: 'pending', dir: dir}

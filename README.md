@@ -1,7 +1,7 @@
 # run-js-app
 ## a quick and dirty run-js app prototype
 
-- Supports multiple instances of run-js watching different directories.
+- Supports multiple instances of run-js watching different directories. No idea how the servers collide.
 - You can start 'em and stop 'em.
 - That's pretty much it.
 
