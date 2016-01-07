@@ -2,7 +2,7 @@
 const menubar = require('menubar')
 const ipcMain = require('electron').ipcMain
 const dialog = require('electron').dialog
-const RunJS = require('./../run-js/lib/index.js')
+const RunJS = require('run-js/lib/index.js')
 
 const log = require('./log.js')
 
