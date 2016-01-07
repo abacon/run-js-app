@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>run-js-app</title>
+    <link href="./node_modules/goratchet/dist/css/ratchet.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="main"></div>
+
+    <script type="text/JavaScript">
+    'use strict'
+    require('babel-register')({presets: ['react', 'es2015']})
+    require('./app/configure.jsx')
+    </script>
+  </body>
+</html>
