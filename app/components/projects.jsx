@@ -80,7 +80,6 @@ var Projects = React.createClass({
         <div className='content'>
           {this.rows()}
           <NewProject pickDirectory={this.pickDirectory} addProject={this.startRunJS}/>
-          <button onClick={() => ipcRenderer.send('list-run-js-instances')}>Update list</button>
         </div>
       </div>
     )
