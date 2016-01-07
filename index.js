@@ -1,13 +1,28 @@
 'use strict'
 const menubar = require('menubar')
 const opn = require('opn')
+const bole = require('bole')
+const garnish = require('garnish')
+
 const ipcMain = require('electron').ipcMain
 const dialog = require('electron').dialog
+
 const RunJS = require('run-js/lib/index.js')
 const defaultHandlers = require('run-js/lib/default-handlers')
 const defaultTransforms = require('run-js/lib/default-transforms')
+const setupLogger = require('run-js/bin/setup-logger')
 
-const log = require('./log.js')
+let logger = garnish({
+  level: 'info',
+  name: 'run-js'
+})
+
+logger.pipe(require('stdout-stream'))
+
+bole.output({
+  level: 'info',
+  stream: logger
+})
 
 let mb = menubar()
 
@@ -53,7 +68,7 @@ let startRunJS = function (event, dir) {
       handlers: defaultHandlers,
       transforms: defaultTransforms
     })
-    log(rjs)
+    setupLogger(rjs)
     rjsInstances[dir] = {instance: rjs, status: 'pending', dir: dir}
   }
 
