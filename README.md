@@ -17,3 +17,5 @@ npm i
 ```
 
 The app should show up in your menubar as a little kitty!
+
+n.b. that no handlers are registered, so you don't get the full run-js action you know and love.
