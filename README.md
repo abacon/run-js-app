@@ -16,6 +16,4 @@ npm i
 ./node_modules/.bin/electron .
 ```
 
-The app should show up in your menubar as a little kitty!
-
-n.b. that no handlers are registered, so you don't get the full run-js action you know and love.
+The app should show up in your menubar as a little kitty! Once you pick a directory and start an instance, it'll open your web browser and file browser to the relevant places.
